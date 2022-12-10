@@ -1,5 +1,6 @@
 package com.example.personalblogapp.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
@@ -16,6 +17,10 @@ public class Post {
 
     @Column(nullable = false)
     private String body;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "post")
+    @JsonBackReference
+    private List<Comment> commentList;
 
     @ManyToOne
     @JsonManagedReference

@@ -23,6 +23,10 @@ public class User {
     @JsonBackReference
     private List<Post> postList;
 
+    @OneToMany
+    @JsonBackReference
+    private List<Comment> commentList;
+
     public User() {
     }
 
