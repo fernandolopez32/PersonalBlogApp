@@ -1,9 +1,7 @@
 package com.example.personalblogapp.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import jakarta.persistence.*;
-import org.springframework.context.annotation.Configuration;
-
+import javax.persistence.*;
 import java.util.List;
 
 @Entity

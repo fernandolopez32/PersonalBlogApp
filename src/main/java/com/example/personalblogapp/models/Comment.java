@@ -1,8 +1,7 @@
 package com.example.personalblogapp.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import jakarta.persistence.*;
-
+import javax.persistence.*;
 @Entity
 @Table(name = "comments")
 public class Comment {
