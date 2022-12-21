@@ -27,6 +27,12 @@ public class Post {
     @JsonManagedReference
     private User user;
 
+    @ManyToOne
+    @JsonManagedReference
+    private Post postVersion;
+
+
+
     public Post() {
     }
     public Post(long id, String title, String body) {
