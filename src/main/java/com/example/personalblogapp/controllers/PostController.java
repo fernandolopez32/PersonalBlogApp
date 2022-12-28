@@ -23,7 +23,7 @@ public class PostController {
         return "home";
     }
 
-    @PostMapping("createPost")
+    @PostMapping("/createPost")
     public String createPost(@ModelAttribute Post post){
         postDao.save(post);
         return "redirect:/";
