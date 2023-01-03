@@ -28,4 +28,8 @@ public class PostController {
         postDao.save(post);
         return "redirect:/";
     }
+    @GetMapping("/randomize")
+    public String randomizer(){
+        return "/randomize";
+    }
 }
